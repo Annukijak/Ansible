@@ -1,0 +1,5 @@
+- name: add user
+  become: true
+  become_user: root
+  ansible.builtin.user:
+    name: anna

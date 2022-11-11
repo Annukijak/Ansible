@@ -1,0 +1,4 @@
+- name: clone1
+  ansible.builtin.git:
+    repo: "{{repo}}"
+    dest: /tmp/server

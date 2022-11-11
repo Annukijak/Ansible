@@ -1,0 +1,16 @@
+- hosts: web
+  vars:
+    packages:
+      - git
+      # - pm2
+      - nodejs
+      - nginx
+    repo: https://github.com/fropa/nodejs-hello
+    user: anna
+    appPath: /tmp/server/app.js
+  roles:
+    - role: adduser
+    - role: packages
+    - role: clone1
+    - role: startserver
+    - role: nginx
